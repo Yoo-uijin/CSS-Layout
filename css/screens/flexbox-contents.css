@@ -1,0 +1,27 @@
+.flexbox-contents {
+  margin: 50px var(--horizontal-space);
+}
+
+.flexbox-contents__main-heading {
+  font-size: 23px;
+  margin: 35px 0;
+}
+
+.flexbox-contents__section {
+  margin: 50px 0;
+}
+
+.flexbox-contents__heading {
+  font-size: 17px;
+  margin: 8px 0;
+}
+
+.flexbox-contents__text {
+  margin-top: 5px;
+  line-height: 1.5em;
+}
+
+#flexbox-axis__img {
+  width: 70%;
+  height: 30%;
+}

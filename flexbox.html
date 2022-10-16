@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout-Flexbox</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <header class="menu-header">
+    <nav class="menu-header__nav">
+      <ul class="menu-header__list">
+        <li class="menu-header__btn menu-header__btn__btn-logo"><a href="#"><i class="fab fa-css3-alt"></i> Layout
+            Thoery</a></li>
+        <li class="menu-header__btn"><a href="#">Flexbox</a></li>
+        <li class="menu-header__btn"><a href="#">Grid</a></li>
+        <li class="menu-header__btn"><a href="#">SCSS</a></li>
+        <li class="menu-header__btn"><a href="#">Project</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+
+  <main class="flexbox-contents">
+
+    <h1 class="flexbox-contents__main-heading">Flexbox</h1>
+
+    <section class="flexbox-contents__section">
+      <h2 class="flexbox-contents__heading">1. Rule</h2>
+      <p class="flexbox-contents__text">
+        flexbox를 이용하여 box들의 위치를 바꾸고 싶다면
+        box(자식)가 아닌 flex container(부모)에게 display: flex;<br>
+        단, 바로 붙어있는 부모만 자식의 위치를 움직일 수 있다.
+      </p>
+    </section>
+
+    <section class="flexbox-contents__section">
+      <h2 class="flexbox-contents__heading">2. main axis & cross axis</h2>
+      <p class="flexbox-contents__text">
+        flex-direction: row(default)일 때,<br>
+        main axis => horizontal axis<br>
+        cross axis => vertical axis<br>
+      <div>
+        <img id="flexbox-axis__img"
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s---3gDSFf1--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/fsln7je4ax7ft3er28hh.png"
+          alt="main-axis & cross-axis">
+      </div>
+
+      justify-content: main axis 방향으로 item을 옮긴다.<br>
+      align-item: cross axis 방향으로 item을 옮긴다.<br>
+
+      주의! align-item: center; 을 했는데 item이 가운데로 이동하지 않는다면, flex container(부모)의 height를 확인 할 것!
+      item과 container의 높이가 같은 경우일 가능성 높음 =>
+      .container {height: 50vh;}
+
+      </p>
+    </section>
+
+    <section class="flexbox-contents__section">
+      <h2 class="flexbox-contents__heading">3. column & row</h2>
+      <p class="flexbox-contents__text">.</p>
+    </section>
+
+    <section class="flexbox-contents__section">
+      <h2 class="flexbox-contents__heading">4. align-self & order</h2>
+      <p class="flexbox-contents__text">.</p>
+    </section>
+
+    <section class="flexbox-contents__section">
+      <h2 class="flexbox-contents__heading">5. wrap & nowrap & reverse & align-content</h2>
+      <p class="flexbox-contents__text">.</p>
+    </section>
+
+    <section class="flexbox-contents__section">
+      <h2 class="flexbox-contents__heading">6. flex-grow & flex-shrink</h2>
+      <p class="flexbox-contents__text">.</p>
+    </section>
+
+    <section class="flexbox-contents__section">
+      <h2 class="flexbox-contents__heading">7. flex-basis</h2>
+      <p class="flexbox-contents__text">.</p>
+    </section>
+
+    <section class="flexbox-contents__section">
+      <h2 class="flexbox-contents__heading">ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩ
+        ⅰⅱⅲⅳⅴⅵⅶⅷⅸⅹ</h2>
+      <p class="flexbox-contents__text">.</p>
+    </section>
+
+
+
+
+  </main>
+
+
+  <script src="https://kit.fontawesome.com/3478f919dc.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

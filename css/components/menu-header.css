@@ -1,0 +1,19 @@
+.menu-header__list {
+  display: flex;
+  justify-content: space-between;
+  padding: 13px var(--horizontal-space);
+  font-size: 18px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: #fafafa;
+}
+
+
+.menu-header__btn:not(.menu-header__btn__btn-logo) {
+  padding-top: 10px;
+}
+
+
+.menu-header__btn__btn-logo {
+  font-size: 25px;
+  padding-top: 5px;
+}
