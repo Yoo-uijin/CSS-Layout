@@ -19,9 +19,18 @@
 .flexbox-contents__text {
   margin-top: 5px;
   line-height: 1.5em;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-between;
 }
 
 #flexbox-axis__img {
   width: 70%;
   height: 30%;
+  margin: 5px 0px;
+}
+
+.flexbox-contents__text span {
+  margin-bottom: 10px;
 }

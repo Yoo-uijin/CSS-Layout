@@ -32,67 +32,92 @@
     <section class="flexbox-contents__section">
       <h2 class="flexbox-contents__heading">1. Rule</h2>
       <p class="flexbox-contents__text">
-        flexbox를 이용하여 box들의 위치를 바꾸고 싶다면
-        box(자식)가 아닌 flex container(부모)에게 display: flex;<br>
-        단, 바로 붙어있는 부모만 자식의 위치를 움직일 수 있다.
+        <span>
+          flexbox를 이용하여 box들의 위치를 바꾸고 싶다면
+          box(자식)가 아닌 flex container(부모)에게 지정한다.<br>
+          단, 바로 붙어있는 부모만 자식의 위치를 움직일 수 있다.
+        </span>
       </p>
     </section>
 
     <section class="flexbox-contents__section">
       <h2 class="flexbox-contents__heading">2. main axis & cross axis</h2>
       <p class="flexbox-contents__text">
-        flex-direction: row(default)일 때,<br>
-        main axis => horizontal axis<br>
-        cross axis => vertical axis<br>
-      <div>
-        <img id="flexbox-axis__img"
-          src="https://res.cloudinary.com/practicaldev/image/fetch/s---3gDSFf1--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/fsln7je4ax7ft3er28hh.png"
-          alt="main-axis & cross-axis">
-      </div>
-
-      justify-content: main axis 방향으로 item을 옮긴다.<br>
-      align-item: cross axis 방향으로 item을 옮긴다.<br>
-
-      주의! align-item: center; 을 했는데 item이 가운데로 이동하지 않는다면, flex container(부모)의 height를 확인 할 것!
-      item과 container의 높이가 같은 경우일 가능성 높음 =>
-      .container {height: 50vh;}
-
+        <span>
+          flex-direction: row(default)일 때,<br>
+          main axis => ((horizontal)) / cross axis => ((vertical))
+        </span>
+        <span>
+          <img id="flexbox-axis__img"
+            src="https://res.cloudinary.com/practicaldev/image/fetch/s---3gDSFf1--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/fsln7je4ax7ft3er28hh.png"
+            alt="main-axis & cross-axis">
+        </span>
+        <span>
+          justify-content: main axis 방향으로 item을 옮긴다.<br>
+          align-items: cross axis 방향으로 item을 옮긴다.
+        </span>
+        <span>
+          주의! align-items: center; 을 했는데 item이 가운데로 이동하지 않는다면, flex container(부모)의 height를 확인 할 것!<br>
+          item과 container의 높이가 같은 경우일 가능성 높음 =>
+          .container {height: 50vh;}
+        </span>
       </p>
     </section>
 
     <section class="flexbox-contents__section">
-      <h2 class="flexbox-contents__heading">3. column & row</h2>
-      <p class="flexbox-contents__text">.</p>
+      <h2 class="flexbox-contents__heading">4. Child Property: align-self & order</h2>
+      <p class="flexbox-contents__text">
+        <span>
+          align-item: cross axis 기준으로 item들을 정렬<br>
+          align-self: cross axis 기준으로 특정 item 지정 정렬<br>
+          => 주의! align-item과 달리 child property임.
+          container가 아닌 지정하고자 하는 특정 item이 선택자
+        </span>
+
+        <span>
+          order: HTML을 바꿀 수 없을 때 유용한 property
+          order:0 => default
+        </span>
+      </p>
     </section>
 
     <section class="flexbox-contents__section">
-      <h2 class="flexbox-contents__heading">4. align-self & order</h2>
-      <p class="flexbox-contents__text">.</p>
+      <h2 class="flexbox-contents__heading">5. flex-wrap & align-content</h2>
+      <p class="flexbox-contents__text">
+        <span>
+          nowrap: 모든 item들이 같은 줄에 있게 한다 => default<br>
+          wrap: item의 width를 지켜준다 item들을 여러 줄에 표시한다<br>
+          wrap-reverse: item들을 여러 줄에 표시하되, 시작점과 끝점이 바뀐다
+        </span>
+        <span>
+          align-content: main axis에서 줄바꿈이 생겨서 item들이 여러 줄일 때 사용. cross axis에서 item들 간의 줄간격을 지정할 수 있다
+        </span>
+      </p>
     </section>
 
     <section class="flexbox-contents__section">
-      <h2 class="flexbox-contents__heading">5. wrap & nowrap & reverse & align-content</h2>
-      <p class="flexbox-contents__text">.</p>
+      <h2 class="flexbox-contents__heading">6. Child Property: flex-grow & flex-shrink</h2>
+      <p class="flexbox-contents__text">
+        <span>
+          flex-shrink: child property,
+          default=> flex shrink:1;<br>
+
+          flex-grow: child property, box 주변의 남아있는 공간을 가져간다
+          deafault=> flex grow: 0;
+        </span>
+      </p>
     </section>
 
     <section class="flexbox-contents__section">
-      <h2 class="flexbox-contents__heading">6. flex-grow & flex-shrink</h2>
-      <p class="flexbox-contents__text">.</p>
+      <h2 class="flexbox-contents__heading">7. Child Property: flex-basis</h2>
+      <p class="flexbox-contents__text">
+        <span>
+          flex-basis: element에게 처음 크기를 제공한다.(flex-grow, flex-shrink로 인해 크기가 바뀌기 전)
+          + main-axis 방향으로 작동한다.
+          flex-direction에 따라 width 또는 height로 작동한다.
+        </span>
+      </p>
     </section>
-
-    <section class="flexbox-contents__section">
-      <h2 class="flexbox-contents__heading">7. flex-basis</h2>
-      <p class="flexbox-contents__text">.</p>
-    </section>
-
-    <section class="flexbox-contents__section">
-      <h2 class="flexbox-contents__heading">ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩ
-        ⅰⅱⅲⅳⅴⅵⅶⅷⅸⅹ</h2>
-      <p class="flexbox-contents__text">.</p>
-    </section>
-
-
-
 
   </main>
 
